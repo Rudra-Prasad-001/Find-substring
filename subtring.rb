@@ -9,7 +9,7 @@ def substrings(str , array)
 
     array.each do |substring|
         freq = string_array.grep(/#{substring}/)
-        freq_substrings[substring] = freq.length
+        freq_substrings[substring] = freq.length  unless freq.length == 0
         
     end
     p freq_substrings.sort_by { |key , value| -value}.to_h
