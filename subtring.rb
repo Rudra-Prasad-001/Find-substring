@@ -1,7 +1,9 @@
 
 def substrings(str , array)
     freq_substrings = {}
+    str.downcase!
     string_array = str.split(" ")
+
 
     array.map! {|item| item.downcase}
 
