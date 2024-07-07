@@ -3,6 +3,8 @@ def substrings(str , array)
     freq_substrings = {}
     string_array = str.split(" ")
 
+    array.map! {|item| item.downcase}
+
     array.each do |substring|
         freq = string_array.grep(/#{substring}/)
         freq_substrings[substring] = freq.length
